@@ -53,7 +53,6 @@ const ContactUs = () => {
       {/* Side-by-Side Contact Section */}
    <div className="flex flex-col md:flex-row max-w-6xl w-full shadow-lg overflow-hidden">
   
-  {/* Image Section */}
   <div className="md:w-1/2 w-full h-full">
     <img 
       src={ContactImage} 
@@ -62,7 +61,6 @@ const ContactUs = () => {
     />
   </div>
 
-  {/* Form Section */}
   <div className="md:w-1/2 w-full bg-white p-8 flex flex-col justify-between">
     <div>
       <h2 className="text-2xl font-semibold mb-4">Get In Touch</h2>
