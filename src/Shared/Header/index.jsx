@@ -40,7 +40,6 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Hamburger Button (Mobile) */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden focus:outline-none text-yellow-500"
