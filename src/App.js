@@ -1,22 +1,25 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
 
-import HomePage from './Home/Home';
-import ArzepakCaseStudy from './Projects/ArzepakCaseStudy';
-import DealCartPortfolio from './Projects/DealCart';
-import HumaanAICaseStudy from './Projects/HumaanAI';
-import PingCaseStudy from './Projects/Ping';
+import HomePage from "./Pages/Home/Home";
+import Details from "./Pages/Details/Details";
+import Project from "./Pages/Projects/Project";
+import AboutUs from "./Pages/AboutUs/About";
+import ContactUs from "./Pages/ContactUs/Contact";
+import Layout from "./Pages/layout/Layout";
 
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/case-study/arzepak" element={<ArzepakCaseStudy />} />
-        <Route path="/case-study/dealcart" element={<DealCartPortfolio />} />
-        <Route path="/case-study/humaan-ai" element={<HumaanAICaseStudy />} />
-        <Route path="/case-study/ping" element={<PingCaseStudy />} />
-      </Routes>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/details/:id" element={<Details />} />
+          <Route path="/projects" element={<Project />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+        </Routes>
+      </Layout>
     </Router>
   );
 }
