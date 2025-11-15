@@ -10,81 +10,115 @@ import {
   SiSololearn,
   SiTailwindcss,
   SiFigma,
-  SiAdobephotoshop
+  SiAdobephotoshop,
 } from "react-icons/si";
 
 // Import your CV PDF file from the assets folder
 import resumePDF from "../../assets/Abdullah_CV_NODE_JS-1.pdf";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-
+import Images from "../../Helper/ImgConstant";
 
 const Home = () => {
-    const navigate = useNavigate();
-const skills = [
-  { name: "React", icon: SiReact, level: 90, animation: "animate-spin-fast" },
-  { name: "Node.js", icon: SiNodedotjs, level: 85, animation: "animate-bounce-icon" },
-  { name: "MongoDB", icon: SiMongodb, level: 70, animation: "animate-pulse-icon" },
-  { name: "Express.js", icon: SiExpress, level: 80, animation: "animate-wiggle-icon" },
-  { name: "Tailwind CSS", icon: SiTailwindcss, level: 95, animation: "animate-rotate-slow" },
-  { name: "Figma", icon: SiFigma, level: 90, animation: "animate-fadeIn" },
-  { name: "Photoshop", icon: SiAdobephotoshop, level: 70, animation: "animate-shake-icon" },
-  { name: "Docker", icon: SiDocker, level: 65, animation: "animate-float-icon" },
-  { name: "AWS", icon: FaAws, level: 75, animation: "animate-spin-slow" },
-];
+  const navigate = useNavigate();
+  const skills = [
+    { name: "React", icon: SiReact, level: 90, animation: "animate-spin-fast" },
+    {
+      name: "Node.js",
+      icon: SiNodedotjs,
+      level: 85,
+      animation: "animate-bounce-icon",
+    },
+    {
+      name: "MongoDB",
+      icon: SiMongodb,
+      level: 70,
+      animation: "animate-pulse-icon",
+    },
+    {
+      name: "Express.js",
+      icon: SiExpress,
+      level: 80,
+      animation: "animate-wiggle-icon",
+    },
+    {
+      name: "Tailwind CSS",
+      icon: SiTailwindcss,
+      level: 95,
+      animation: "animate-rotate-slow",
+    },
+    { name: "Figma", icon: SiFigma, level: 90, animation: "animate-fadeIn" },
+    {
+      name: "Photoshop",
+      icon: SiAdobephotoshop,
+      level: 70,
+      animation: "animate-shake-icon",
+    },
+    {
+      name: "Docker",
+      icon: SiDocker,
+      level: 65,
+      animation: "animate-float-icon",
+    },
+    { name: "AWS", icon: FaAws, level: 75, animation: "animate-spin-slow" },
+  ];
 
   const cases = [
-    {
-      id: 1,
-      title: "ARZEPAK",
-      category: "REAL ESTATE | PROPTECH | RENTAL & LEASING",
-      role: "UX STRATEGY | DESIGN SYSTEM | INTERACTION DESIGN",
-      year: "2019",
-      image: abdullahImage,
-    },
-    {
-      id: 2,
-      title: "PING",
-      category: "HOME SERVICES | CONSUMER TECH | CONSUMER GOODS",
-      role: "SERVICE DESIGN & PRODUCT STRATEGY | MOBILE APP",
-      year: "2021",
-      image: "https://via.placeholder.com/600x400.png?text=PING+Preview",
-    },
-    {
-      id: 3,
-      title: "FAYVO",
-      category: "SOCIAL MEDIA | LIFESTYLE & ENTERTAINMENT",
-      role: "USER ENGAGEMENT & RETENTION | SOCIAL UX",
-      year: "2022",
-      image: "https://via.placeholder.com/600x400.png?text=FAYVO+Preview",
-    },
-    {
-      id: 4,
-      title: "DEALCART",
-      category: "E-COMMERCE | RETAIL | CONSUMER GOODS",
-      role: "UX STRATEGY | DESIGN SYSTEM | MOBILE 1ST APPROACH",
-      year: "2023",
-      image: "https://via.placeholder.com/600x400.png?text=DEALCART+Preview",
-    },
-    {
-      id: 5,
-      title: "ENGAGED SCHOLAR",
-      category: "EDTECH | RESEARCH & LEARNING | AI",
-      role: "UX AUDIT/DESIGN | AI-POWERED CONTENT SUMMARIZATION",
-      year: "2025",
-      image: "https://via.placeholder.com/600x400.png?text=ENGAGED+SCHOLAR+Preview",
-    },
-  ];
-    const brands = [
-    "99ACRES", "DIGIMID", "ORIGAMI", "SEQUAL", "GRAANA", "LIFTKIT",
-    "DUKAN", "WWF", "FAYVO", "MEDICA", "BAYT", "ARZEPAK",
-    "DELUXE", "PUFFS", "LIVE IT", "PING", "PIYAAS", "CRYPTIN", "POSTPAY"
-  ];
+  {
+    id: 1,
+    title: "LandPricer",
+    category: "REAL ESTATE | PROPTECH | RENTAL & LEASING", // ✅ Correct
+    role: "UX STRATEGY | DESIGN SYSTEM | INTERACTION DESIGN",
+    year: "2024",
+    image: Images.LANDPRICER_HOME_IMG,
+  },
+  {
+    id: 2,
+    title: "Healink",
+    category: "HEALTHCARE | HEALTH TECH | MOBILE APP", // Corrected from HOME SERVICES
+    role: "SERVICE DESIGN & PRODUCT STRATEGY | MOBILE APP",
+    year: "2021",
+    image: Images.HEALINK_ADMIN_DASHBOARD_IMG,
+  },
+  {
+    id: 3,
+    title: "ParryScript",
+    category: "SOCIAL MEDIA | LIFESTYLE & ENTERTAINMENT", // ✅ Seems correct
+    role: "USER ENGAGEMENT & RETENTION | SOCIAL UX",
+    year: "2022",
+    image: Images.PARRYSCRIPT_PARRY_SCRIPT_IMG,
+  },
+  {
+    id: 4,
+    title: "Valor Sport",
+    category: "EDTECH | SPORTS TECH | AI", // Slightly more precise than generic
+    role: "UX AUDIT/DESIGN | AI-POWERED CONTENT SUMMARIZATION",
+    year: "2025",
+    image: Images.VALOR_SPORT_CARD_CARD_DETAILS_IMG,
+  },
+  {
+    id: 5,
+    title: "eFile Ny1033",
+    category: "E-GOVERNMENT | DOCUMENT MANAGEMENT | CONSUMER SERVICES", // Corrected
+    role: "UX STRATEGY | DESIGN SYSTEM | MOBILE 1ST APPROACH",
+    year: "2023",
+    image: Images.eFILE_HOME1_IMG,
+  },
+  {
+    id: 6,
+    title: "HR Chromatics",
+    category: "E-COMMERCE | RETAIL | CONSUMER GOODS", // ✅ Seems correct
+    role: "UX STRATEGY | DESIGN SYSTEM | MOBILE 1ST APPROACH",
+    year: "2023",
+    image: Images.HRCHROMATICS_CONTACTUS_IMG,
+  },
+]
+;
 
   const [hoveredCase, setHoveredCase] = useState(null);
   return (
     <>
-         <section className=" p-4 md:p-8 lg:py-16 xl:py-24 mx-auto max-w-screen-2xl">
+      <section className=" p-4 md:p-8 lg:py-16 xl:py-24 mx-auto max-w-screen-2xl">
         <p className="text-xs md:text-sm lg:text-md xl:text-lg uppercase mb-4 p-4 font-semibold">
           Hello, I am{" "}
           <span className="text-violet-800 font-semibold">
@@ -107,9 +141,6 @@ const skills = [
           {/* ===== IMAGE + ORBITING ICONS SECTION ===== */}
           <div className="relative flex justify-center md:justify-end w-full md:w-1/2 group animate-fadeIn">
             {/* Glowing Code Frame */}
-         
-
-           
 
             {/* ===== Orbiting Icons ===== */}
             <div className="absolute w-[300px] md:w-[420px] h-[300px] md:h-[420px] rounded-full animate-spin-slow z-10">
@@ -247,156 +278,153 @@ const skills = [
         </div>
       </section>
 
+        <section className="bg-white text-black p-4 md:p-8 lg:py-16 xl:py-24 mx-auto max-w-screen-2xl">
+      <div className="max-w-screen-2xl mx-auto">
+        {/* Header */}
+        <h3 className="text-sm uppercase tracking-wide mb-4 font-semibold">
+          Selected Cases
+        </h3>
+        <hr className="border-t border-gray-300 mb-8" />
 
-   <section className="  bg-white text-black p-4 md:p-8 lg:py-16 xl:py-24 mx-auto max-w-screen-2xl">
-  <div className="max-w-screen-2xl mx-auto">
-    {/* Header */}
-    <h3 className="text-sm uppercase tracking-wide mb-4 font-semibold">
-      Selected Cases
-    </h3>
-    <hr className="border-t border-gray-300 mb-8" />
+        {/* List */}
+        <div className="relative">
+          <div className="grid grid-cols-2 sm:grid-cols-6 lg:grid-cols-12 text-xs sm:text-sm uppercase font-semibold text-gray-500 border-b border-gray-200">
+            <div className="col-span-1 sm:col-span-2 font-semibold">Project</div>
+            <div className="hidden sm:block col-span-4">Industry</div>
+            <div className="hidden lg:block col-span-4">Role</div>
+            <div className="col-span-1 text-right">Year</div>
+          </div>
 
-    {/* List */}
-    <div className="relative">
-      <div className="grid grid-cols-2 sm:grid-cols-6 lg:grid-cols-12 text-xs sm:text-sm uppercase font-semibold text-gray-500 border-b border-gray-200">
-        <div className="col-span-1 sm:col-span-2 font-semibold">Project</div>
-        <div className="hidden sm:block col-span-4">Industry</div>
-        <div className="hidden lg:block col-span-4">Role</div>
-        <div className="col-span-1 text-right">Year</div>
-      </div>
+          <div className="divide-y divide-gray-200">
+            {cases.map((item) => (
+              <div
+                key={item.id}
+                className={`grid grid-cols-2 sm:grid-cols-6 lg:grid-cols-12 items-center py-4 cursor-pointer transition-all duration-300 relative ${
+                  hoveredCase === item.id ? "bg-gray-100" : ""
+                }`}
+                onMouseEnter={() => setHoveredCase(item.id)}
+                onMouseLeave={() => setHoveredCase(null)}
+                onClick={() =>
+                  navigate(`/details/${item.id}`, {
+                    state: { clickedImage: hoveredCase ? item.image : item.image },
+                  })
+                }
+              >
+                {/* Project */}
+                <div className="col-span-2 sm:col-span-2 font-bold text-black text-sm">
+                  {item.title}
+                </div>
 
-      <div className="divide-y divide-gray-200">
-        {cases.map((item) => (
-          <div
-            key={item.id}
-            className={`grid grid-cols-2 sm:grid-cols-6 lg:grid-cols-12 items-center py-4 cursor-pointer transition-all duration-300 relative ${
-              hoveredCase === item.id ? "bg-gray-100" : ""
-            }`}
-            onMouseEnter={() => setHoveredCase(item.id)}
-            onMouseLeave={() => setHoveredCase(null)}
-            onClick={() => navigate(`/details/${item.id}`)}
-          >
-            {/* Project */}
-            <div className="col-span-2 sm:col-span-2 font-bold text-black text-sm">
-              {item.title}
-            </div>
+                {/* Industry */}
+                <div className="hidden sm:block col-span-4 text-gray-600 text-xs md:text-sm">
+                  {item.category}
+                </div>
 
-            {/* Industry */}
-            <div className="hidden sm:block col-span-4 text-gray-600 text-xs md:text-sm">
-              {item.category}
-            </div>
+                {/* Role */}
+                <div className="hidden lg:block col-span-4 text-gray-600 text-xs md:text-sm">
+                  {item.role}
+                </div>
 
-            {/* Role */}
-            <div className="hidden lg:block col-span-4 text-gray-600 text-xs md:text-sm">
-              {item.role}
-            </div>
+                {/* Year */}
+                <div className="col-span-2 sm:col-span-1 text-right text-gray-800 font-semibold text-sm">
+                  {item.year}
+                </div>
 
-            {/* Year */}
-            <div className="col-span-2 sm:col-span-1 text-right text-gray-800 font-semibold text-sm">
-              {item.year}
-            </div>
-
-            {/* Hover Image */}
-            {hoveredCase === item.id && (
-              <div className="absolute left-0 top-full mt-2 sm:mt-2 bg-white p-2 rounded-lg shadow-lg border border-gray-100 z-20 w-72 sm:w-80">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-40 sm:h-48 object-cover rounded-md"
-                />
+                {/* Hover Image */}
+                {hoveredCase === item.id && (
+                  <div className="absolute left-0 top-full mt-2 sm:mt-2 bg-white p-2 rounded-lg shadow-lg border border-gray-100 z-20 w-72 sm:w-80 transition-transform duration-300 transform scale-105">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-40 sm:h-48 object-cover rounded-md"
+                    />
+                  </div>
+                )}
               </div>
-            )}
+            ))}
           </div>
-        ))}
-      </div>
-    </div>
+        </div>
 
-    {/* Button */}
-    <div className="flex justify-end mt-6 sm:mt-8">
-      <button
-        onClick={() => navigate("/projects")}
-        className="flex items-center gap-2 border border-black rounded-full px-4 sm:px-6 py-2 text-xs sm:text-sm uppercase font-semibold hover:bg-black hover:text-white transition-all duration-300"
-      >
-        View All Cases <span><SiSololearn  className="animate-spin-fast text-yellow-500"/></span>
-      </button>
-    </div>
-  </div>
-</section>
-
- <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-200 to-gray-300 p-4">
-      <div className="bg-black text-gray-400 rounded-2xl p-10  w-full grid md:grid-cols-2 gap-12">
-
-        {/* Left Text */}
-        <div className="animate-fadeIn">
-          <h1 className="text-4xl font-light leading-snug mb-6">
-            <span className="text-white font-semibold">Specialize</span> in crafting{" "}
-            <span className="block text-gray-400">
-              unique, people-focused{" "}
-              <span className="text-white font-semibold">Visually Look</span>
+        {/* Button */}
+        <div className="flex justify-end mt-6 sm:mt-8">
+          <button
+            onClick={() => navigate("/projects")}
+            className="flex items-center gap-2 border border-black rounded-full px-4 sm:px-6 py-2 text-xs sm:text-sm uppercase font-semibold hover:bg-black hover:text-white transition-all duration-300"
+          >
+            View All Cases{" "}
+            <span>
+              <SiSololearn className="animate-spin-fast text-yellow-500" />
             </span>
-            strategies that bring ideas to life
-          </h1>
-          <p className="text-xs mt-3 text-gray-600 italic">
-            Designing interfaces, building functional apps, and creating visual stories
-          </p>
-          <div>
-            <img src={abdullahImage} alt="Abdullah" className="w-full max-w-lg rounded-full" />
-          </div>
+          </button>
         </div>
+      </div>
+    </section>
 
-        {/* Right Skills */}
-        <div className="animate-slideUp">
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-    {skills.map((skill, idx) => {
-      const Icon = skill.icon;
-      return (
-        <div
-          key={idx}
-          className="bg-gray-900 p-4 rounded-2xl shadow-lg flex flex-col items-start gap-3 
+      <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-200 to-gray-300 p-4">
+        <div className="bg-black text-gray-400 rounded-2xl p-10  w-full grid md:grid-cols-2 gap-12">
+          {/* Left Text */}
+          <div className="animate-fadeIn">
+            <h1 className="text-4xl font-light leading-snug mb-6">
+              <span className="text-white font-semibold">Specialize</span> in
+              crafting{" "}
+              <span className="block text-gray-400">
+                unique, people-focused{" "}
+                <span className="text-white font-semibold">Visually Look</span>
+              </span>
+              strategies that bring ideas to life
+            </h1>
+            <p className="text-xs mt-3 text-gray-600 italic">
+              Designing interfaces, building functional apps, and creating
+              visual stories
+            </p>
+            <div>
+              <img
+                src={abdullahImage}
+                alt="Abdullah"
+                className="w-full max-w-lg rounded-full"
+              />
+            </div>
+          </div>
+
+          {/* Right Skills */}
+          <div className="animate-slideUp">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {skills.map((skill, idx) => {
+                const Icon = skill.icon;
+                return (
+                  <div
+                    key={idx}
+                    className="bg-gray-900 p-4 rounded-2xl shadow-lg flex flex-col items-start gap-3 
                      hover:scale-105 hover:drop-shadow-glow transition-transform duration-300"
-        >
-          <div className="flex items-center gap-3 w-full">
-            <Icon className={`text-3xl text-cyan-400 ${skill.animation} transition-all duration-300`} />
-            <h4 className="text-white font-semibold">{skill.name}</h4>
-          </div>
+                  >
+                    <div className="flex items-center gap-3 w-full">
+                      <Icon
+                        className={`text-3xl text-cyan-400 ${skill.animation} transition-all duration-300`}
+                      />
+                      <h4 className="text-white font-semibold">{skill.name}</h4>
+                    </div>
 
-          {/* Animated progress bar */}
-          <div className="w-full h-3 bg-gray-800 rounded-full overflow-hidden">
-            <div
-              className="h-3 bg-cyan-400 rounded-full"
-              style={{ width: `${skill.level}%`, transition: "width 1.5s ease-in-out" }}
-            ></div>
-          </div>
+                    {/* Animated progress bar */}
+                    <div className="w-full h-3 bg-gray-800 rounded-full overflow-hidden">
+                      <div
+                        className="h-3 bg-cyan-400 rounded-full"
+                        style={{
+                          width: `${skill.level}%`,
+                          transition: "width 1.5s ease-in-out",
+                        }}
+                      ></div>
+                    </div>
 
-          <p className="text-gray-400 text-xs">{skill.level}%</p>
+                    <p className="text-gray-400 text-xs">{skill.level}%</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
-      );
-    })}
-  </div>
-</div>
+      </section>
 
-      </div>
-    </section>
-
-<section className="p-4 md:p-8   mx-auto max-w-screen-2xl bg-white text-black">
-      <h3 className="text-xs font-semibold uppercase tracking-wider mb-3 text-gray-500">
-        Brands I’ve Empowered Through Design
-      </h3>
-
-      <p className="text-lg md:text-3xl font-bold leading-relaxed text-gray-900 mb-10">
-        Through 8+ years of strategic, collaborative design, I’ve helped startups and global teams
-        across healthcare, AI, real estate, and SaaS create thoughtful experiences that resonate
-        with users and elevate brands.
-      </p>
-
-      <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm uppercase tracking-wide text-gray-700 font-medium">
-        {brands.map((brand, index) => (
-          <span key={index} className="after:content-['-'] last:after:content-['']">
-            {brand}
-          </span>
-        ))}
-      </div>
-    </section>
+  
 
     </>
   );

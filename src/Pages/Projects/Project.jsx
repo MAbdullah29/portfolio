@@ -1,46 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { projectData, ProjectImages } from "../../data/projectdata"; // Your real projects
 
 const Project = () => {
-  
-
-  const projectsImages = [
-    {
-      title: "Bankoor",
-      role: "UI/UX Design",
-      description: "A fintech app helping users manage money with clarity and confidence.",
-      image: "https://images.unsplash.com/photo-1581092795360-fd1b6dbcd0c9?auto=format&fit=crop&w=1000&q=80",
-    },
-    {
-      title: "Fayvo",
-      role: "UX Strategy",
-      description: "A recommendation app built to connect people through shared interests.",
-      image: "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=1000&q=80",
-    },
-    {
-      title: "Pingo",
-      role: "Product Design",
-      description: "A social platform to connect and share experiences with friends.",
-      image: "https://images.unsplash.com/photo-1580910051073-52e5aa7a0b1f?auto=format&fit=crop&w=1000&q=80",
-    },
-    {
-      title: "Arzepak",
-      role: "Brand Identity",
-      description: "Rebranding a logistics platform with a modern and trustworthy look.",
-      image: "https://images.unsplash.com/photo-1604145559206-e3bce0040e19?auto=format&fit=crop&w=1000&q=80",
-    },
-    {
-      title: "Notebook",
-      role: "Interface Design",
-      description: "Creating a consistent visual system across web and mobile experiences.",
-      image: "https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1000&q=80",
-    },
-    {
-      title: "Fayvo Dashboard",
-      role: "UI System",
-      description: "Building a robust admin dashboard for analytics and team collaboration.",
-      image: "https://images.unsplash.com/photo-1632727040604-8cb1f9b6b440?auto=format&fit=crop&w=1000&q=80",
-    },
-  ];
+  const navigate = useNavigate();
 
   const steps = [
     { step: "1", title: "Discover", desc: "Understand business goals and user needs." },
@@ -71,13 +34,11 @@ const Project = () => {
   ];
 
   return (
-    <main className="font-sans text-gray-900">
-         
-
+    <main className=" text-gray-900 bg-gradient-to-b from-gray-200 to-gray-300">
       {/* ===== Hero Section ===== */}
-      <section className="text-center py-28 bg-gray-50">
+      <section className="text-center  bg-gray-50">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight animate-fadeIn">
-          Crafting seamless human-centered experiences since 2016.
+          Crafting seamless human-centered experiences since <span className="text-yellow-500">2022.</span> 
         </h1>
         <p className="text-gray-600 text-lg max-w-3xl mx-auto animate-fadeIn delay-200">
           Partnering with startups and global teams to build digital products that delight users and drive results.
@@ -86,20 +47,23 @@ const Project = () => {
 
       {/* ===== Projects Section ===== */}
       <section className="max-w-6xl mx-auto px-6 md:px-10 py-24 space-y-28">
-        {projectsImages.map((p, i) => (
+        {projectData.map((p, i) => (
           <div
-            key={i}
-            className={`grid md:grid-cols-2 gap-10 md:gap-16 items-center transition-transform duration-500 hover:scale-105 animate-slideUp`}
+            key={p.id}
+            className={`grid md:grid-cols-2 gap-10 md:gap-16 items-center transition-transform duration-300 hover:scale-105 animate-slideUp`}
           >
             {/* Image */}
             <div
               className={`relative ${i % 2 === 0 ? "md:order-1" : "md:order-2"} flex justify-center`}
             >
-              <div className="bg-white p-3 rounded-3xl shadow-lg overflow-hidden">
+              <div className="bg-white p-3 rounded-3xl shadow-lg overflow-hidden cursor-pointer">
                 <img
-                  src={p.image}
+                  src={ProjectImages[i].image} 
                   alt={p.title}
                   className="rounded-2xl w-full h-auto object-cover"
+                  onClick={() =>
+                    navigate(`/details/${p.id}`, { state: { clickedImage: ProjectImages[i].image } })
+                  }
                 />
               </div>
             </div>
@@ -107,18 +71,23 @@ const Project = () => {
             {/* Info */}
             <div
               className={`${
-                i % 2 === 0 ? "md:order-2 text-left" : "md:order-1 text-left md:text-right"
+                i % 2 === 0 ? "md:order-2 text-left bg-white p-8 rounded-2xl shadow-lg" : "md:order-1 text-left bg-white p-8 rounded-2xl shadow-lg"
               }`}
             >
-              <h3 className="text-3xl font-bold mb-2">{p.title}</h3>
-              <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-4">
-                {p.role}
+              <h3 className="text-3xl text-black font-bold mb-2">{p.title}</h3>
+              <p className="text-xs    font-semibold mb-4">
+                {p.overview}
               </p>
               <p className="text-gray-700 text-base leading-relaxed mb-6">
-                {p.description}
+                {p.category}
               </p>
-              <button className="text-indigo-600 font-semibold hover:underline">
-                View Case Study →
+              <button
+                onClick={() =>
+                  navigate(`/details/${p.id}`, { state: { clickedImage: ProjectImages[i].image } })
+                }
+                className="text-yellow-500 bg-black font-semibold rounded-full px-6 py-3 hover:bg-yellow-500 hover:text-black transition-all duration-300 ease-in-out"
+              >
+                View Case Study 
               </button>
             </div>
           </div>

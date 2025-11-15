@@ -1,62 +1,34 @@
 import React from "react";
-import {
-  FaInstagram,
-  FaBehance,
-  FaDribbble,
-  FaLinkedin,
-  FaWhatsapp,
-  FaEnvelope,
-} from "react-icons/fa";
+import { FaLinkedin, FaEnvelope, FaGithub } from "react-icons/fa";
+import { FaSquareUpwork } from "react-icons/fa6";
 
 const Footer = () => {
   const socialLinks = [
     {
-      icon: <FaInstagram />,
-      color: "from-pink-500 to-purple-500",
-      bg: "bg-pink-500",
-      href: "#",
-      label: "Instagram",
-    },
-    {
-      icon: <FaBehance />,
-      color: "from-blue-500 to-blue-700",
-      bg: "bg-blue-600",
-      href: "#",
-      label: "Behance",
-    },
-    {
-      icon: <FaDribbble />,
-      color: "from-pink-400 to-pink-600",
-      bg: "bg-pink-500",
-      href: "#",
-      label: "Dribbble",
-    },
-    {
       icon: <FaLinkedin />,
-      color: "from-blue-600 to-cyan-500",
-      bg: "bg-blue-700",
-      href: "#",
+      href: "https://www.linkedin.com/in/yourprofile",
       label: "LinkedIn",
     },
     {
-      icon: <FaWhatsapp />,
-      color: "from-green-400 to-green-600",
-      bg: "bg-green-500",
-      href: "https://wa.me/923001234567",
-      label: "WhatsApp",
+      icon: <FaGithub />,
+      href: "https://github.com/yourusername",
+      label: "GitHub",
     },
     {
       icon: <FaEnvelope />,
-      color: "from-red-400 to-red-600",
-      bg: "bg-red-500",
       href: "mailto:hello@mohsinamin.com",
       label: "Gmail",
+    },
+    {
+      icon: <FaSquareUpwork />,
+      href: "https://www.upwork.com/freelancers/~yourprofile",
+      label: "Upwork",
     },
   ];
 
   return (
-    <footer className="w-full border-t border-gray-300 px-8  py-8 bg-white text-black overflow-hidden">
-      <div className=" mx-auto flex flex-col gap-8">
+    <footer className="w-full border-t border-gray-300 px-6  py-8 bg-white text-black">
+      <div className="max-w-screen-xl mx-auto flex flex-col gap-8">
         {/* ===== Top Section ===== */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           <div>
@@ -73,10 +45,10 @@ const Footer = () => {
               Start the conversation
             </p>
             <a
-              href="mailto:hello@mohsinamin.com"
+              href="mailto:abdullahzafar17@gmail.com"
               className="font-semibold text-sm md:text-base hover:underline break-all"
             >
-              hello@mohsinamin.com
+              abdullahzafar17@gmail.com
             </a>
           </div>
         </div>
@@ -85,14 +57,14 @@ const Footer = () => {
         <div className="border-t border-gray-300 w-full"></div>
 
         {/* ===== Bottom Section ===== */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Logo */}
           <div className="text-xl md:text-2xl font-bold tracking-tight">
             MA.
           </div>
 
           {/* Social Icons */}
-          <div className="flex flex-wrap items-center gap-2 md:gap-5">
+          <div className="flex flex-wrap items-center gap-3 md:gap-5">
             {socialLinks.map((item, index) => (
               <a
                 key={index}
@@ -100,26 +72,11 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={item.label}
-                className={`relative group flex items-center justify-center w-10 h-10 rounded-full bg-white`}
+                className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-yellow-500 text-black 
+                 hover:bg-black hover:text-yellow-500 transition-all duration-300 ease-in-out
+                 transform hover:scale-110 hover:-rotate-6 hover:shadow-lg text-2xl"
               >
-                {/* Gradient Border */}
-                <span
-                  className={`absolute inset-0 rounded-full p-[2px] bg-gradient-to-tr ${item.color} animate-gradient`}
-                >
-                  <span className="flex items-center justify-center w-full h-full bg-white rounded-full"></span>
-                </span>
-
-                {/* Colored Icon */}
-                <span
-                  className={`relative text-2xl ${item.bg} text-white rounded-full p-2 group-hover:scale-125 group-hover:rotate-6 transition-all duration-300 ease-in-out`}
-                >
-                  {item.icon}
-                </span>
-
-                {/* Glow effect */}
-                <span
-                  className={`absolute inset-0 opacity-0 group-hover:opacity-50 rounded-full blur-md bg-gradient-to-tr ${item.color} transition-opacity duration-300`}
-                ></span>
+                {item.icon}
               </a>
             ))}
           </div>

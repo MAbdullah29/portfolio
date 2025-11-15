@@ -2,34 +2,60 @@
 import React from "react";
 import resumePDF from "../../assets/Abdullah_CV_NODE_JS-1.pdf";
 import { LiaFileDownloadSolid } from "react-icons/lia";
+import Images from "../../Helper/ImgConstant";
 
 export default function AboutUs() {
   const projects = [
-    {
-      id: "01",
-      title: "Luxe Elegance",
-      category: "Branding Design",
-      image: "https://via.placeholder.com/400x300?text=Luxe+Elegance",
-    },
-    {
-      id: "02",
-      title: "Arcadia Studio",
-      category: "UI/UX Design",
-      image: "https://via.placeholder.com/400x300?text=Arcadia+Studio",
-    },
-    {
-      id: "03",
-      title: "Creatif Studio",
-      category: "Illustration",
-      image: "https://via.placeholder.com/400x300?text=Creatif+Studio",
-    },
-    {
-      id: "04",
-      title: "Orbit X",
-      category: "UI/UX Design",
-      image: "https://via.placeholder.com/400x300?text=Orbit+X",
-    },
-  ];
+  {
+    id: 1,
+    title: "LandPricer",
+    category: "REAL ESTATE | PROPTECH | RENTAL & LEASING", // ✅ Correct
+    role: "UX STRATEGY | DESIGN SYSTEM | INTERACTION DESIGN",
+    year: "2024",
+    image: Images.LANDPRICER_HOME_IMG,
+  },
+  {
+    id: 2,
+    title: "Healink",
+    category: "HEALTHCARE | HEALTH TECH | MOBILE APP", // Corrected from HOME SERVICES
+    role: "SERVICE DESIGN & PRODUCT STRATEGY | MOBILE APP",
+    year: "2021",
+    image: Images.HEALINK_ADMIN_DASHBOARD_IMG,
+  },
+  {
+    id: 3,
+    title: "ParryScript",
+    category: "SOCIAL MEDIA | LIFESTYLE & ENTERTAINMENT", // ✅ Seems correct
+    role: "USER ENGAGEMENT & RETENTION | SOCIAL UX",
+    year: "2022",
+    image: Images.PARRYSCRIPT_PARRY_SCRIPT_IMG,
+  },
+  {
+    id: 4,
+    title: "Valor Sport",
+    category: "EDTECH | SPORTS TECH | AI", // Slightly more precise than generic
+    role: "UX AUDIT/DESIGN | AI-POWERED CONTENT SUMMARIZATION",
+    year: "2025",
+    image: Images.VALOR_SPORT_CARD_CARD_DETAILS_IMG,
+  },
+  {
+    id: 5,
+    title: "eFile Ny1033",
+    category: "E-GOVERNMENT | DOCUMENT MANAGEMENT | CONSUMER SERVICES", // Corrected
+    role: "UX STRATEGY | DESIGN SYSTEM | MOBILE 1ST APPROACH",
+    year: "2023",
+    image: Images.eFILE_HOME1_IMG,
+  },
+  {
+    id: 6,
+    title: "HR Chromatics",
+    category: "E-COMMERCE | RETAIL | CONSUMER GOODS", // ✅ Seems correct
+    role: "UX STRATEGY | DESIGN SYSTEM | MOBILE 1ST APPROACH",
+    year: "2023",
+    image: Images.HRCHROMATICS_CONTACTUS_IMG,
+  },
+];
+
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-white text-gray-900 py-16 font-sans">
