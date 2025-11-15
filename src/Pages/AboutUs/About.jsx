@@ -9,7 +9,7 @@ export default function AboutUs() {
   {
     id: 1,
     title: "LandPricer",
-    category: "REAL ESTATE | PROPTECH | RENTAL & LEASING", // ✅ Correct
+    category: "REAL ESTATE | PROPTECH | RENTAL & LEASING", //  ✅ Correct
     role: "UX STRATEGY | DESIGN SYSTEM | INTERACTION DESIGN",
     year: "2024",
     image: Images.LANDPRICER_HOME_IMG,
