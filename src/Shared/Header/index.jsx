@@ -13,8 +13,8 @@ const Header = () => {
   ];
 
   return (
-    <header className="border-b border-gray-800 bg-black text-white">
-      <div className="flex justify-between items-center px-8 py-6 relative">
+    <header className="border-b border-gray-800 bg-black text-white ">
+      <div className="flex justify-between items-center px-8 py-6 relative max-w-screen-2xl mx-auto">
         {/* Logo */}
         <Link
           to="/"

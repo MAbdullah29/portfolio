@@ -28,7 +28,7 @@ const Footer = () => {
 
   return (
     <footer className="w-full border-t border-gray-300 px-6  py-8 bg-white text-black">
-      <div className="max-w-screen-xl mx-auto flex flex-col gap-8">
+      <div className=" mx-auto flex flex-col gap-8 max-w-screen-2xl">
         {/* ===== Top Section ===== */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           <div>
@@ -46,7 +46,7 @@ const Footer = () => {
             </p>
             <a
               href="mailto:abdullahzafar17@gmail.com"
-              className="font-semibold text-sm md:text-base hover:underline break-all"
+              className="font-semibold text-violet-800 text-sm md:text-base hover:underline break-all"
             >
               abdullahzafar17@gmail.com
             </a>
@@ -64,7 +64,7 @@ const Footer = () => {
           </div>
 
           {/* Social Icons */}
-          <div className="flex flex-wrap items-center gap-3 md:gap-5">
+          <div className="flex flex-wrap  items-center gap-3 md:gap-5">
             {socialLinks.map((item, index) => (
               <a
                 key={index}
@@ -72,7 +72,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={item.label}
-                className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-yellow-500 text-black 
+                className="w-10 h-10  flex items-center justify-center rounded-full border-2 bg-black text-yellow-500 
                  hover:bg-black hover:text-yellow-500 transition-all duration-300 ease-in-out
                  transform hover:scale-110 hover:-rotate-6 hover:shadow-lg text-2xl"
               >
