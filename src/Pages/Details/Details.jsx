@@ -24,7 +24,7 @@ const Details = () => {
   }
 
   return (
-    <section className="min-h-screen px-4 md:px-16 py-4  bg-gray-50">
+    <section className="min-h-screen px-4 md:px-8 max-w-screen-2xl mx-auto py-4  bg-gray-50">
       {/* Hero Image */}
       {clickedImage && (
         <div className="mb-14  flex justify-center animate-fadeIn">

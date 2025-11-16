@@ -281,6 +281,12 @@ let Images = {
   VALOR_SPORT_CARD_CONGRATS_IMG: require("../../assets/Valor-Sport-card/Congrats.jpg"),
   VALOR_SPORT_CARD_DATAPOPUP_IMG: require("../../assets/Valor-Sport-card/date popup.jpg"),
   VALOR_SPORT_CARD_SUCCESS_IMG: require("../../assets/Valor-Sport-card/Success.jpg"),
+
+
+
+
+    CODE_IMG: require("../../assets//code.jpg"),
+
 };
 
 export default Images;

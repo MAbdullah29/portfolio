@@ -1,8 +1,8 @@
 // src/pages/AboutUs.jsx
 import React from "react";
 import resumePDF from "../../assets/Abdullah_CV_NODE_JS-1.pdf";
-import { LiaFileDownloadSolid } from "react-icons/lia";
 import Images from "../../Helper/ImgConstant";
+import { SiSololearn } from "react-icons/si";
 
 export default function AboutUs() {
   const projects = [
@@ -58,9 +58,9 @@ export default function AboutUs() {
 
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white text-gray-900 py-16 font-sans">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-white text-gray-900 py-4 md:py-8 lg:py-12 font-sans">
       {/* Header */}
-      <header className="w-full flex flex-wrap justify-center gap-2 items-center py-12 text-center">
+      <header className="w-full flex flex-wrap justify-center gap-2 items-center py-4 md:py-8 lg:py-12 text-center">
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight text-yellow-500 uppercase">
           MUHAMMAD
         </h1>
@@ -83,7 +83,7 @@ export default function AboutUs() {
 
         <div className="space-y-5 text-gray-600 text-base leading-relaxed max-w-2xl mx-auto">
           <p>
-            With over 8 years of experience, I lead product design for SaaS,
+            With over 3 years of experience, I lead product design for SaaS,
             Real Estate, Enterprise-level applications, health-tech, AI tools,
             and more. I transform complex challenges into intuitive,
             user-centered solutions that drive business growth.
@@ -99,10 +99,10 @@ export default function AboutUs() {
        <a
                      href={resumePDF}
                      download="Muhammad_Abdullah_Resume.pdf"
-                     className="inline-flex gap-2  justify-center items-center px-6 py-3 border border-black rounded-full text-sm font-semibold hover:bg-black hover:text-white transition-all duration-300 text-center"
+                     className="inline-flex gap-2 bg-black text-yellow-500 justify-center items-center px-6 py-3 border  rounded-full text-sm font-semibold hover:bg-yellow-500 hover:text-white transition-all duration-300 text-center"
                    >
                      Download My Resume
-                     <LiaFileDownloadSolid size={30} className="text-yellow-500" />
+                <SiSololearn className="animate-spin-fast " />
                    </a>
         </div>
       </section>
@@ -113,10 +113,10 @@ export default function AboutUs() {
           {/* Left Section */}
           <div>
             <h1 className="text-3xl sm:text-4xl font-light leading-snug">
-              <span className="text-white font-semibold">Specialize</span> in crafting{" "}
+              <span className="text-yellow-500 font-semibold">Specialize</span> in crafting{" "}
               <span className="block text-gray-400">
                 unique, people-focused{" "}
-                <span className="text-white font-semibold">Visual Looks</span>
+                <span className="text-violet-800 font-semibold">Visual Looks</span>
               </span>
               strategies that bring ideas to life
             </h1>
