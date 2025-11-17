@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./App.css";
+import "./App.css"; // Keep this - it should have all Tailwind + animations
 
 import HomePage from "./Pages/Home/Home";
 import Details from "./Pages/Details/Details";
@@ -17,7 +17,7 @@ function App() {
           <Route path="/details/:id" element={<Details />} />
           <Route path="/projects" element={<Project />} />
           <Route path="/about-me" element={<AboutUs />} />
-          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/contact" element={<ContactUs />} />
         </Routes>
       </Layout>
     </Router>
