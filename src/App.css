@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== Scrollbar Styling (Chrome, Edge, Safari) ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e5e7eb;    /* Light gray track (Tailwind gray-200) */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3730a3;   /* Indigo-800 */
+  border-radius: 10px;
+  border: 2px solid #e5e7eb;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #312e81;   /* Indigo-900 for hover */
+}
+
+/* ===== Firefox Scrollbar ===== */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3730a3 #e5e7eb;
+}

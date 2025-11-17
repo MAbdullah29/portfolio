@@ -7,9 +7,10 @@ const Header = () => {
   const location = useLocation();
 
   const links = [
+        { name: "Home", path: "/" },
     { name: "About Me", path: "/about-me" },
     { name: "Projects", path: "/projects" },
-    { name: "Contact Us", path: "/contact-us" },
+    { name: "Contact Me", path: "/contact" },
   ];
 
   return (
